@@ -1,7 +1,8 @@
 export default function Product2({ type, img, prix, title }) {
   return (
-    <div
-      className="bg-white w-[30%] flex flex-col gap-5 p-5 rounded-xl "
+    <div className="inline-block mb-5">
+      <div
+      className="bg-white  flex flex-col gap-5 p-5 rounded-xl "
       style={{
         boxShadow: "0px 10px 30px rgba(0,0,0,.1)",
       }}
@@ -67,6 +68,7 @@ export default function Product2({ type, img, prix, title }) {
       <button className="bg-primary text-white py-3 rounded-lg">
         Ajouter au panier
       </button>
+    </div>
     </div>
   );
 }

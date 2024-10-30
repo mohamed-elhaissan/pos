@@ -6,7 +6,7 @@ import prod5 from '../assets/svg/setting.svg'
 import logout from '../assets/svg/logout.svg'
 export default function Menu(){
     return(
-        <div className="w-[10%] bg-white h-[100vh] flex flex-col items-center justify-between py-9">
+        <div className="w-[10%] bg-white h-[100vh] sticky top-0 flex flex-col items-center justify-between py-9">
             <div  className='flex flex-col items-center gap-6' >
                 <h1 className='w-10 h-10  rounded-full bg-primary mb-9'></h1>
                 <div className='flex flex-col items-center '>
