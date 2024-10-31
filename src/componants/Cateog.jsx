@@ -14,12 +14,9 @@ import { IoBagHandle } from "react-icons/io5";
 import { useContext, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 // context Importing
-import {PaniesContext} from '../Context/PaniesContext.jsx';
+// import {PaniesContext} from '../Context/PaniesContext.jsx';
 
 export default function Catego() {
-  
-  const ProductsPanies = useContext(PaniesContext)
-  console.log(ProductsPanies);
   const [isVisible, setIsVisible] = useState(false);
   const  handleShowPanies = ()=>{setIsVisible(!isVisible)}
   return (

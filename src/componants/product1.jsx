@@ -1,8 +1,9 @@
-import {  useContext } from "react";
-import PaniesContext from "../Context/PaniesContext.jsx";
+import {  useContext } from "react"
+import PaniesContext from "../Context/StoreContext.jsx";
 
 export default function Product1({ type, img, prix, title }) {
   const { ProductsPanies, setProductsPanies } = useContext(PaniesContext);
+
 
   const handleAddItem = () => {
     const newProduct = [{
