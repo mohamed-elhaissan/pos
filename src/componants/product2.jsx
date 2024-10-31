@@ -1,4 +1,14 @@
+import { createContext } from 'react';
+import Panies from '../Context/PaniesContext.jsx';
 export default function Product2({ type, img, prix, title }) {
+  const produit = {
+    productType : type,
+    productPrix : prix,
+    productImg : img,
+    productTitle : title
+  }
+  const {ProductsPanies,setProductsPanies} = createContext(Panies)
+
   return (
     <div className="inline-block mb-5">
       <div
@@ -65,7 +75,7 @@ export default function Product2({ type, img, prix, title }) {
         </span>
       </div>
       <hr></hr>
-      <button className="bg-primary text-white py-3 rounded-lg">
+      <button className="bg-primary text-white py-3 rounded-lg" onClick={()=>{setProductsPanies([...ProductsPanies,...produit])}}>
         Ajouter au panier
       </button>
     </div>

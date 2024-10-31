@@ -25,7 +25,6 @@ export default [
     },
     rules: {
       "react/prop-types": "off",
-
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...react.configs["jsx-runtime"].rules,

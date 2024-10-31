@@ -1,17 +1,25 @@
+// componants importing
 import Product1 from "./product1.jsx";
 import Product2 from "./product2.jsx";
-import prod1 from "../assets/products/prod1.svg";
-import prod2 from "../assets/products/prod2.svg";
-import prod3 from "../assets/products/prod3.svg";
-import prod4 from "../assets/products/prod4.svg";
+// images importing
+import prod1 from "../../public/products/prod1.svg";
+import prod2 from "../../public/products/prod2.svg";
+import prod3 from "../../public/products/prod3.svg";
+import prod4 from "../../public/products/prod4.svg";
+import codePar from "../../public/codePar.svg";
+import saveMoney from "../../public/save-money.svg";
+import cedit from "../../public/credit.svg";
+// else
 import { IoBagHandle } from "react-icons/io5";
-import { useState } from "react";
-import codePar from "../assets/codePar.svg";
-import saveMoney from "../assets/save-money.svg";
-import cedit from "../assets/credit.svg";
+import { useContext, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
+// context Importing
+import {PaniesContext} from '../Context/PaniesContext.jsx';
 
 export default function Catego() {
+  
+  const ProductsPanies = useContext(PaniesContext)
+  console.log(ProductsPanies);
   const [isVisible, setIsVisible] = useState(false);
   const  handleShowPanies = ()=>{setIsVisible(!isVisible)}
   return (
@@ -94,11 +102,12 @@ export default function Catego() {
           <h2 className="text-3xl font-bold">Panier</h2>
           <IoCloseOutline className="text-3xl cursor-pointer" onClick={handleShowPanies} />
         </div>
-        <div className="flex flex-col text-center">
+        
+        {/* <div className="flex flex-col text-center">
           <img src={codePar} alt="" />
           <h2 className="font-semibold">Votre panier est vide</h2>
           <p>Veuillez ajouter des produits en scannant le codebar</p>
-        </div>
+        </div> */}
         <div>
           <div className="border mb-2 flex justify-between items-center pl-2 rounded-lg">
             <p>Espece</p>
